@@ -1,0 +1,54 @@
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css";
+
+@import "nativewind/theme";
+
+@theme {
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+  --color-primary: #2563eb;
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #1d4ed8;
+
+  --color-accent: #eff6ff;
+  --color-background: #f6f6f6;
+  --color-border: #e2e8f0;
+  --color-card: #ffffff;
+  --color-tab-background: #ffffff;
+  --color-foreground: #0f172a;
+  --color-input: #ffffff;
+  --color-input-border: #e2e8f0;
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #64748b;
+  --color-overlay: #0f172a;
+  --color-ring: #3b82f6;
+  --color-secondary: #f1f5f9;
+  --color-secondary-foreground: #0f172a;
+
+  --font-inter: "Inter_400Regular";
+  --font-inter-medium: "Inter_500Medium";
+  --font-inter-semibold: "Inter_600SemiBold";
+  --font-inter-bold: "Inter_700Bold";
+
+  --font-sans: "Inter_400Regular";
+}
+
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-accent: #2563eb;
+    --color-background: #0b0f19;
+    --color-border: #242c3e;
+    --color-card: #161d2e;
+    --color-tab-background: #161d2e;
+    --color-foreground: #f8fafc;
+    --color-input: #161d2e;
+    --color-input-border: #2e3750;
+    --color-muted: #1c2436;
+    --color-muted-foreground: #8b94a8;
+    --color-overlay: #000000;
+    --color-ring: #3b82f6;
+    --color-secondary: #1c2436;
+    --color-secondary-foreground: #f1f5f9;
+  }
+}
