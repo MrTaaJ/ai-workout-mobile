@@ -45,8 +45,9 @@ export default function RootLayout() {
     <View className="flex-1 bg-background">
       <StatusBar style={colorScheme === "dark" ? "light" : "dark"} />
       <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="(tabs)" options={{ title: "Home" }} />
-      </Stack>
+        <Stack.Screen name="(public)" options={{ title: "Public Screen" }} />
+      </Stack> 
     </View>
   );
 }
+
