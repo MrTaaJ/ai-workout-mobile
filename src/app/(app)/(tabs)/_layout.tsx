@@ -1,13 +1,11 @@
+import { useUnstableNativeVariable } from "@/src/lib/utils";
 import { Feather } from "@expo/vector-icons";
 import { Tabs, useRouter } from "expo-router";
 import { NativeTabs } from "expo-router/unstable-native-tabs";
-import { useUnstableNativeVariable as useUnstableNativeVariableRaw } from "nativewind";
 import { Platform, Pressable, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-const useUnstableNativeVariable = useUnstableNativeVariableRaw as (
-  name: string,
-) => string | undefined;
+
 
 function CustomTabLayout() {
   const router = useRouter();
