@@ -1,22 +1,27 @@
-import { useUnstableNativeVariable } from "@/src/lib/utils";
+// import { useUnstableNativeVariable } from "@/src/lib/utils";
+import { useAppThemeColor } from "@/src/theme/app-theme";
 import { Feather } from "@expo/vector-icons";
 import { Tabs, useRouter } from "expo-router";
 import { NativeTabs } from "expo-router/unstable-native-tabs";
+import { useEffect } from "react";
 import { Platform, Pressable, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-
-
 
 function CustomTabLayout() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
 
-  const tabBackground = useUnstableNativeVariable("--color-tab-background");
-  const primary = useUnstableNativeVariable("--color-primary");
-  const mutedForeground = useUnstableNativeVariable("--color-muted-foreground");
-  const border = useUnstableNativeVariable("--color-border");
+  const tabBackground = useAppThemeColor("tabBackground");
+  const primary = useAppThemeColor("primary");
+  const mutedForeground = useAppThemeColor("mutedForeground");
+  const border = useAppThemeColor("border");
 
   const bottomSpace = Platform.OS === "android" ? 12 : 0;
+
+  useEffect(() => {
+    console.log("primary", primary);
+  }, [primary]);
+
   return (
     <Tabs
       screenOptions={{

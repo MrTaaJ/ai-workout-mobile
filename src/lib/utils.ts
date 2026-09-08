@@ -1,5 +1,3 @@
-import { useUnstableNativeVariable as useUnstableNativeVariableRaw } from "nativewind";
-
 export function cn(...classes: (string | false | null | undefined)[]): string {
   return classes.filter(Boolean).join(" ");
 }
@@ -24,7 +22,3 @@ export function getStatusBarStyle(
       ? "light"
       : "dark";
 }
-
-export const useUnstableNativeVariable = useUnstableNativeVariableRaw as (
-  name: string,
-) => string | undefined;

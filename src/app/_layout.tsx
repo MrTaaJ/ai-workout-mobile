@@ -46,8 +46,7 @@ export default function RootLayout() {
       <StatusBar style={colorScheme === "dark" ? "light" : "dark"} />
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="(public)" options={{ title: "Public Screen" }} />
-      </Stack> 
+      </Stack>
     </View>
   );
 }
-

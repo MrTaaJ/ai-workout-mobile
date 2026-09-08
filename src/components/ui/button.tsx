@@ -3,7 +3,8 @@ import { forwardRef } from "react";
 import type { PressableProps } from "react-native";
 import { ActivityIndicator, Pressable, Text } from "react-native";
 
-import { cn, useUnstableNativeVariable } from "@/src/lib/utils";
+import { cn } from "@/src/lib/utils";
+import { useAppThemeColor } from "@/src/theme/app-theme";
 
 const variants = {
   default: {
@@ -45,10 +46,8 @@ const Button = forwardRef<ComponentRef<typeof Pressable>, ButtonProps>(
     ref,
   ) => {
 
-    const primaryForeground = useUnstableNativeVariable(
-      "--color-primary-foreground",
-    );
-    
+    const primaryForeground = useAppThemeColor("primaryForeground");
+
     return (
       <Pressable
         ref={ref}

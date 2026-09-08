@@ -1,5 +1,5 @@
 import Button from "@/src/components/ui/button";
-import { useUnstableNativeVariable } from "@/src/lib/utils";
+import { useAppThemeColor } from "@/src/theme/app-theme";
 import { Feather } from "@expo/vector-icons";
 import { Link } from "expo-router";
 import {
@@ -18,7 +18,7 @@ const logo = require("../../../assets/images/app-images/logo.png");
 const mockup = require("../../../assets/images/app-images/app-mockup.png");
 
 const Welcome = () => {
-  const primaryForeground = useUnstableNativeVariable("--color-destructive");
+  const primaryForeground = useAppThemeColor("primaryForeground");
 
   // Removed: <-- please check the (root layout) --->
   // useFocusEffect(
