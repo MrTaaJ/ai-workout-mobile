@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { useAppThemeColor } from "@/theme/app-theme";
 import { ComponentProps } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -8,9 +9,12 @@ export default function SafeAreaScreen({
   className,
   ...props
 }: SafeAreaScreenProps) {
+  const backgroundColor = useAppThemeColor("background");
+
   return (
     <SafeAreaView
-      className={cn("flex-1 bg-background", className)}
+      style={{ flex: 1, backgroundColor }}
+      className={cn(className)}
       {...props}
     />
   );

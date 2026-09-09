@@ -5,8 +5,8 @@ import Button from "@/components/ui/button";
 import SafeAreaScreen from "@/components/ui/safe-area-screen";
 import {
   answers,
-  saveOnboardingAnswer,
   getStepIndex,
+  saveOnboardingAnswer,
   steps,
 } from "@/constants/onboarding";
 import { OnboardingValues } from "@/lib/validations/onboarding-validation";
