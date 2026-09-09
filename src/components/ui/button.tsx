@@ -3,8 +3,8 @@ import { forwardRef } from "react";
 import type { PressableProps } from "react-native";
 import { ActivityIndicator, Pressable, Text } from "react-native";
 
-import { cn } from "@/src/lib/utils";
-import { useAppThemeColor } from "@/src/theme/app-theme";
+import { cn } from "@/lib/utils";
+import { useAppThemeColor } from "@/theme/app-theme";
 
 const variants = {
   default: {

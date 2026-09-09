@@ -1,5 +1,5 @@
-import Button from "@/src/components/ui/button";
-import { useAppThemeColor } from "@/src/theme/app-theme";
+import Button from "@/components/ui/button";
+import { useAppThemeColor } from "@/theme/app-theme";
 import { Feather } from "@expo/vector-icons";
 import { Link } from "expo-router";
 import {
