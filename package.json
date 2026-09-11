@@ -3,11 +3,18 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "dependencies": {
+    "@better-auth/expo": "^1.6.25",
     "@expo-google-fonts/inter": "^0.4.2",
     "@expo/ui": "~57.0.15",
     "@expo/vector-icons": "^15.1.1",
+    "@hookform/resolvers": "^5.4.0",
+    "@neondatabase/serverless": "^1.1.0",
+    "@opentelemetry/api": "^1.9.1",
     "@react-native-async-storage/async-storage": "2.2.0",
     "@tailwindcss/postcss": "^4.3.3",
+    "better-auth": "^1.6.25",
+    "date-fns": "^4.4.0",
+    "drizzle-orm": "^0.45.2",
     "expo": "~57.0.19",
     "expo-constants": "~57.0.17",
     "expo-device": "~57.0.1",
@@ -15,7 +22,9 @@
     "expo-glass-effect": "~57.0.1",
     "expo-image": "~57.0.4",
     "expo-linking": "~57.0.9",
+    "expo-network": "^57.0.1",
     "expo-router": "~57.0.20",
+    "expo-secure-store": "^57.0.3",
     "expo-splash-screen": "~57.0.8",
     "expo-status-bar": "~57.0.1",
     "expo-symbols": "~57.0.2",
@@ -25,9 +34,11 @@
     "postcss": "^8.5.28",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "react-hook-form": "^7.81.0",
     "react-native": "0.86.3",
     "react-native-css": "^3.0.7",
     "react-native-gesture-handler": "~2.32.0",
+    "react-native-keyboard-controller": "^1.22.4",
     "react-native-reanimated": "4.5.1",
     "react-native-safe-area-context": "~5.7.0",
     "react-native-screens": "~4.26.0",
@@ -37,6 +48,8 @@
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
+    "dotenv": "^17.4.2",
+    "drizzle-kit": "^0.31.10",
     "typescript": "~6.0.3"
   },
   "scripts": {
@@ -45,7 +58,12 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:seed": "tsx src/db/seed/index.ts",
+    "db:studio": "drizzle-kit studio"
   },
   "overrides": {
     "lightningcss": "1.30.1"
